@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+
+@font-face {
+    font-family:"Acumin Pro" ;
+    src: url("./assets/fonts/Acumin-RPro.otf");
+}
+
+@font-face {
+    font-family:"Marcellus"  ;
+    src: url("./assets/fonts/Marcellus-Regular.ttf");
+}
+
+body{
+  font-family:"Acumin Pro" !important;
+  background-color: #FBF7F1;
+}
+
+h1,h2,h3{
+     font-family:"Marcellus"  ;
+}
+
+.swiper-pagination-bullet{
+width: 40px !important;
+border-radius: 40px !important;
+
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}
