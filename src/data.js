@@ -1,3 +1,5 @@
+import { img } from "framer-motion/client";
+
 export const slider = [
   {
     img: "./assets/images/header-img.jpg",
@@ -78,5 +80,23 @@ export const trends = [
   {
     img: "../assets/images/trend2.jpg",
     text: "The Artistry Behind Bespoke Jewelry Designs",
+  },
+];
+
+export const images = [
+  {
+    img: "../assets/images/samta.jpg",
+  },
+  {
+    img: "../assets/images/samta1.jpg",
+  },
+  {
+    img: "../assets/images/samta2.jpg",
+  },
+  {
+    img: "../assets/images/samta3.jpg",
+  },
+  {
+    img: "../assets/images/samta4.jpg",
   },
 ];

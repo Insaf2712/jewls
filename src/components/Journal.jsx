@@ -13,7 +13,7 @@ const Journal = () => {
       <div className="flex items-center gap-15">
         {trends.map((j) => (
           <div className="flex flex-col gap-2 w-3/8 mx-auto h-[50vh]">
-            <div className="relative w-full-h-50">
+            <div className="relative w-full ">
               <img
                 src={j.img}
                 alt=""
