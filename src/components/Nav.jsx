@@ -1,7 +1,8 @@
 import React from "react";
 import { BiBasket, BiChevronDown, BiSearch, BiUser } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ active, setActive }) => {
   return (
     <div className="sticky top-0 z-50 flex justify-between items-center h-15 w-full border-t border-gray-300 bg-[#FBF7F1] px-10">
       <img
@@ -10,18 +11,18 @@ const Nav = () => {
         className="w-22 "
       />
       <div className="flex items-center gap-14 text-xs group">
-        <a
-          href=""
+        <Link
+          to="/"
           className="group-hover:opacity-50 hover:opacity-100 transition-all duration-300 font-semibold "
         >
           HOME
-        </a>
-        <a
-          href=""
+        </Link>
+        <Link
+          to="/shop"
           className="group-hover:opacity-50 hover:opacity-100 transition-all duration-300 text-gray-800"
         >
           SHOP
-        </a>
+        </Link>
         <a
           className="flex gap-1 items-center group-hover:opacity-50 hover:opacity-100 transition-all duration-300 text-gray-800"
           href=""
@@ -56,7 +57,7 @@ const Nav = () => {
       <div className="flex items-center gap-10 text-xl text-gray-700 ">
         <BiSearch />
         <BiUser />
-        <BiBasket />
+        <BiBasket onClick={() => setActive(true)} className="cursor-pointer" />
       </div>
     </div>
   );

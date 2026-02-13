@@ -1,31 +1,42 @@
 @import "tailwindcss";
 
-
-
 @font-face {
-    font-family:"Acumin Pro" ;
-    src: url("./assets/fonts/Acumin-RPro.otf");
+  font-family: "Acumin Pro";
+  src: url("/assets/fonts/Acumin-RPro.otf");
 }
 
 @font-face {
-    font-family:"Marcellus"  ;
-    src: url("./assets/fonts/Marcellus-Regular.ttf");
+  font-family: "Marcellus";
+  src: url("/assets/fonts/Marcellus-Regular.ttf");
 }
 
-body{
-  font-family:"Acumin Pro" !important;
-  background-color: #FBF7F1;
+body {
+  font-family: "Acumin Pro" !important;
+  background-color: #fbf7f1;
 }
 
-h1,h2,h3{
-     font-family:"Marcellus"  ;
+h1,
+h2,
+h3 {
+  font-family: "Marcellus";
 }
 
-.swiper-pagination-bullet{
-width: 40px !important;
-border-radius: 40px !important;
-
+.swiper-pagination-bullet {
+  width: 40px !important;
+  border-radius: 40px !important;
 }
-.swiper-pagination-bullet-active{
-    background-color: #fff !important;
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.p {
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #a29a8b;
+  background-clip: text;
+}
+
+@theme {
+  --color-main: #41381e;
 }
