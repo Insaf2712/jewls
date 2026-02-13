@@ -1,4 +1,3 @@
-import { img } from "framer-motion/client";
 
 export const slider = [
   {
