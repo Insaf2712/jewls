@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { FaX } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decQuantity,
+  deletefromcart,
+  incQuantity,
+} from "../features/slices/cartSlice";
 
 const Cart = () => {
+  const { cart, quantity } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
   return (
     <section className="space-y-10 h-full py-18">
       <div className="flex flex-col items-center justify-center gap-4 py-10">
@@ -28,34 +37,41 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b">
-            <td className="flex items-center justify-center py-5">
-              <img
-                className="w-20 h-25"
-                src="/assets/images/aurora_ring.jpg"
-                alt=""
-              />
-            </td>
-            <td className="text-center">
-              <h3>Aurora ring</h3>
-            </td>
-            <td className="text-center">
-              <span>$39,90</span>
-            </td>
-            <td className="">
-              <div className="flex gap-3  m-auto justify-center items-center w-fit">
-                <BiMinus />
-                <span>1</span>
-                <BiPlus />
-              </div>
-            </td>
-            <td className="text-center">
-              <span>$100,00</span>
-            </td>
-            <td>
-              <FaX className="mx-auto" />
-            </td>
-          </tr>
+          {cart.map((el, index) => (
+            <tr className="border-b">
+              <td className="flex items-center justify-center py-5">
+                <img className="w-20 h-25" src={el.img[0]} alt="" />
+              </td>
+              <td className="text-center">
+                <h3>{el.title}</h3>
+              </td>
+              <td className="text-center">
+                <span>${el.price}</span>
+              </td>
+              <td className="">
+                <div className="flex gap-3  m-auto justify-center items-center w-fit">
+                  <BiMinus
+                    // onClick={() => incDec("dec", el.id)}
+                    className="cursor-pointer "
+                  />
+                  <span>{el.quantity}</span>
+                  <BiPlus
+                    // onClick={() => incDec("inc", el.id)}
+                    className="cursor-pointer "
+                  />
+                </div>
+              </td>
+              <td className="text-center">
+                <span>${el.total.toFixed(2)}</span>
+              </td>
+              <td>
+                <FaX
+                  className="mx-auto cursor-pointer"
+                  onClick={() => dispatch(deletefromcart(el.id))}
+                />
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <div className="flex items-center justify-between w-4/5 mx-auto ">

@@ -30,7 +30,7 @@ const Footer = () => {
           <img
             src="https://jewelleryhub.liquid-themes.com/wp-content/uploads/2021/11/logo.svg"
             alt=""
-            className="w-22 "
+            className="w-22"
           />
           <p className="text-[#837B68] text-sm ">
             Shop online or visit our showroom to explore our exquisite
