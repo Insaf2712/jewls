@@ -11,6 +11,7 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Faq from "./pages/Faq";
+import About from "./pages/About";
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/about" element={<About />} />
         <Route path="/faq" element={<Faq />} />
       </Routes>
       <Footer />

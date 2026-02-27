@@ -41,12 +41,12 @@ const Nav = ({ active, setActive }) => {
         >
           RINGS
         </a>
-        <a
-          href=""
+        <Link
+          to="/about"
           className="group-hover:opacity-50 hover:opacity-100 transition-all duration-300 text-gray-800"
         >
           ABOUT
-        </a>
+        </Link>
         <Link
           to="/faq"
           className="group-hover:opacity-50 hover:opacity-100 transition-all duration-300 text-gray-800"
