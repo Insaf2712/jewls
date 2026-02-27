@@ -47,12 +47,12 @@ const Nav = ({ active, setActive }) => {
         >
           ABOUT
         </a>
-        <a
-          href=""
+        <Link
+          to="/faq"
           className="group-hover:opacity-50 hover:opacity-100 transition-all duration-300 text-gray-800"
         >
           FAQ
-        </a>
+        </Link>
       </div>
       <div className="flex items-center gap-10 text-xl text-gray-700 ">
         <BiSearch />
